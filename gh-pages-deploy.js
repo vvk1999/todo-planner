@@ -8,11 +8,11 @@ const iconArrows = emoji.get('fast_forward');
 const iconRocket = emoji.get('rocket');
 (async () => {
 	try {
-		// await execa('git', [
-		// 	'checkout',
-		// 	// '--orphan',
-		// 	'gh-pages'
-		// ]);
+		await execa('git', [
+			'checkout',
+			'--orphan',
+			'gh-pages'
+		]);
 		console.log(`${iconArrows} ${chalk.yellow('Building started...')}`);
 		await execa('npm', [
 			'run',
